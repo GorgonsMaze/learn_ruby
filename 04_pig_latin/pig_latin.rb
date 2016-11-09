@@ -8,14 +8,18 @@ def translate(str)
 
     # for each indices of there is no vowel continue until true
     while vowel.include?(word[0].downcase) == false
+
       # if word's first and second index have "qu"
       if word[0..1] == "qu"
         # cut out indices 0 - 1 and add them to end
         word = word[2..-1] + word[0..1]
+
       else
         # cut out first indices and add to end
         word = word[1..-1] + word[0]
+
       end
+
     end
 
     word = word + "ay"   # ad "ay" to end of word
